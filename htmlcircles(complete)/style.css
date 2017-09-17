@@ -1,0 +1,10 @@
+svg{
+    background: gainsboro;
+    width: 800px;
+    height: 400px;
+}
+
+#circle1{
+    fill:blue;
+    stroke:yellow;
+}
