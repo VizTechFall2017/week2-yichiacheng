@@ -63,6 +63,11 @@ svg.append('circle')
     .attr('class', 'circle')
     .style('fill', 'pink')
 
+
+var svg = d3.select('svg');
+
+var clicked = false;
+
 svg.append('circle')
     .attr('cx', 400)
     .attr('cy', 150)
@@ -70,12 +75,41 @@ svg.append('circle')
     .attr('class', 'circle')
     .style('fill', 'brown')
 
+    .on('click', function(d){
+        if (clicked == false){
+            d3.select(this).style('fill','brown');
+            clicked = true;
+        }
+        else{
+            d3.select(this).style('fill','black');
+            clicked = false;
+        }
+
+    });
+
+var svg = d3.select('svg');
+
+var clicked = false;
+
 svg.append('circle')
     .attr('cx', 200)
     .attr('cy', 150)
     .attr('r', 35)
     .attr('class', 'circle')
     .style('fill', 'brown')
+
+    .on('click', function(d){
+        if (clicked == false){
+            d3.select(this).style('fill','brown');
+            clicked = true;
+        }
+        else{
+            d3.select(this).style('fill','black');
+            clicked = false;
+        }
+
+    });
+
 
 svg.append('circle')
     .attr('cx', 185)
